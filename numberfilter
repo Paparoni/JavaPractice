@@ -8,13 +8,12 @@ public class NonNumberFilter {
 	}
 
 	public static String[] push(String val, String[] orgArray) {
-		int orgLength = orgArray.length;
 
-		String[] newArray = new String[orgLength + 1];
+		String[] newArray = new String[orgArray.length + 1];
 
-		System.arraycopy(orgArray, 0, newArray, 0, orgLength);
+		System.arraycopy(orgArray, 0, newArray, 0, orgArray.length);
 
-		newArray[orgLength] = val;
+		newArray[orgArray.length] = val;
 
 		return newArray;
 
